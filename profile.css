@@ -10,9 +10,8 @@ body,html{
     position: absolute;
     left: 0;
     top: 0;
-    width: 50px;
+    width: 55px;
     height: 100vh;
-    gap: 10px;
     padding: .30rem;
     border-right: 1px solid black;
     transition: all 0.5s ease;
@@ -24,13 +23,23 @@ body,html{
     display: flex;
     justify-content: center;
 }
+.menu #btn{
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+.menu #btn:hover{
+    background-color: aqua;
+}
 .sidebar.active .menu{
     justify-content: right;
 }
 .profile{
     display: flex;
+    align-items: center;
     flex-direction: column;
     position: relative;
+    margin: 0 auto;
 }
 #profile-img{
     width: 50px;
@@ -42,7 +51,42 @@ body,html{
 .sidebar.active #profile-img{
     width: 100px;
     height: 100px;
-    object-fit: contain;
+    object-fit: cover;
+}
+#username{
+    opacity: 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+.sidebar.active #username{
+    opacity: 1;
+}
+
+.sidebar ul li{
+    position: relative;
+    list-style-type: none;
+    width: 90%;
+    line-height: 50px;
+}
+.sidebar ul li a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 20px;
+}
+.sidebar ul li a:hover{
+    background-color: antiquewhite;
+}
+.sidebar ul li a i{
+    min-width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 12px;
+    line-height: 50px;
+ 
+}
+.sidebar span{
+    white-space: nowrap;
 }
 
 
@@ -53,9 +97,12 @@ body,html{
 
 
 
-
+.sidebar.active ul li .tool-tip{
+    display: none;
+}
 
 .sidebar.active ~ .main-container{
+    position: relative;
     left: 200px;
     width: calc(100% - 200px);
 }
