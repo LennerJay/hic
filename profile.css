@@ -120,8 +120,16 @@ body,html{
 
 .sidebar.active ~ .main-container{
     position: relative;
-    left: 200px;
-    width: calc(100% - 200px);
+    left: 220px;
+    width: calc(100% - 220px);
+}
+.main-container{
+    position: relative;
+    min-height: 100vh;
+    width: calc(100% - 80px);
+    top: 0;
+    left: 80px;
+    transition: all 0.5s ease;
 }
 /* @media screen and (min-width<= 601px) {
     #name {
